@@ -49,7 +49,12 @@ const Login = () => {
                     onChange={handleChange}
                     required
                 />
-                <Botao type="submit" texto="Entrar" onClick={handleSubmit} />
+                <Botao
+                    type="submit"
+                    texto="Entrar"
+                    onClick={handleSubmit}
+                    disabled={loading === true || !ValidadorInput()}
+                />
 
                 <div>
                     <p>Não tem uma conta?</p>
