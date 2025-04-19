@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import { Container, Form } from "./style";
 import Input from "../../Components/Input";
 import Botao from "../../Components/Botao";
+import { validarEmail, validarSenha } from "../../Utils/validadores";
 
 const Login = () => {
     const [loading, setLoading] = useState();
+    const [form, setForm] = useState([]);
 
     const handleChange = (event) => {
         console.log("Digitando...", event.target.name, event.target.value);
+        setForm({ ...form, [event.target.name]: event.target.value }); // Atualiza o estado do formulário com o valor digitado
+        console.log("Formulário atualizado:", form);
     };
 
     const handleSubmit = async (event) => {
@@ -20,6 +24,12 @@ const Login = () => {
             alert("Erro ao fazer login" + err);
         }
     };
+
+    const ValidadorInput = () => {
+        return validarEmail(form.email) && validarSenha(form.password);
+    };
+
+    console.log("Form está válido :", ValidadorInput());
 
     return (
         <Container>
