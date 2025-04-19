@@ -8,6 +8,14 @@ const Login = () => {
         console.log("Digitando...", event.target.name, event.target.value);
     };
 
+    const handleSubmit = async () => {
+        try {
+            alert("Formulário enviado!");
+        } catch (err) {
+            alert("Erro ao fazer login" + err);
+        }
+    };
+
     return (
         <Container>
             <Form>
@@ -17,6 +25,7 @@ const Login = () => {
                     type="email"
                     placeholder="Digite seu email"
                     onChange={handleChange}
+                    required
                 />
                 <Input
                     nome="password"
@@ -25,7 +34,7 @@ const Login = () => {
                     onChange={handleChange}
                     required
                 />
-                <Botao />
+                <Botao type="submit" texto="Entrar" onClick={handleSubmit} />
 
                 <div>
                     <p>Não tem uma conta?</p>
