@@ -1,7 +1,7 @@
 import React from "react";
-import { Input } from "./style";
+import { InputCustomizado } from "./style";
 
-const InputCustumizado = () => {
-    return <Input />;
+const Input = () => {
+    return <InputCustomizado />;
 };
-export default InputCustumizado;
+export default Input;

@@ -1,12 +1,12 @@
 import styled from "styled-components";
-export const InputCostumizado = styled.input`
+export const InputCustomizado = styled.input`
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
     margin-bottom: 1rem;
-    background-color: #f9f9f9;
+    background-color: rgb(249, 249, 249);
     color: #333;
     transition: all 0.3s ease-in-out;
 
