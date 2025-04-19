@@ -13,10 +13,11 @@ export const InputCustomizado = styled.input`
     &:focus {
         border-color: #007bff;
         outline: none;
-        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        box-shadow: 0 0 5px rgba(20, 20, 20, 0.5);
     }
 
     &::placeholder {
-        color: #999;
+        color: black;
+        opacity: 1;
     }
 `;
