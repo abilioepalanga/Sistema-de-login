@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Form } from "./style";
 import Input from "../../Components/Input";
 import Botao from "../../Components/Botao";
 
 const Login = () => {
+    const [loading, setLoading] = useState();
+
     const handleChange = (event) => {
         console.log("Digitando...", event.target.name, event.target.value);
     };
 
-    const handleSubmit = async () => {
+    const handleSubmit = async (event) => {
+        event.preventDefault(); // Previne o comportamento padrão do formulário
         try {
+            setLoading(true);
             alert("Formulário enviado!");
+            setLoading(false);
         } catch (err) {
             alert("Erro ao fazer login" + err);
         }
